@@ -1,7 +1,7 @@
 ---
-title: ARK: Survival Ascended PS5 — Single-Player PvE Progression
-description: A progression roadmap covering early shelter, taming priorities, equipment, base development, and moving toward boss-ready infrastructure.
-game: ARK: Survival Ascended
+title: "ARK: Survival Ascended PS5 — Single-Player PvE Progression"
+description: "A progression roadmap covering early shelter, taming priorities, equipment, base development, and moving toward boss-ready infrastructure."
+game: "ARK: Survival Ascended"
 gameSlug: ark-asa
 category: Progression
 updated: 2026-09-28
