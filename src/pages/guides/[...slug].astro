@@ -9,23 +9,25 @@ const { guide } = Astro.props;
 const { Content, headings } = await render(guide);
 const allGuides = await getCollection('guides');
 const related = allGuides.filter(g=>g.data.gameSlug===guide.data.gameSlug && g.id!==guide.id).sort((a,b)=>a.data.order-b.data.order).slice(0,3);
+const isDiablo = guide.data.gameSlug === 'diablo-4';
 ---
 <BaseLayout title={guide.data.title + " | Jon's Game Guides"} description={guide.data.description}>
 <section class="guide-header"><div class="container">
 <a class="back-link" href={'/games/'+guide.data.gameSlug+'/'}>← {guide.data.game} hub</a>
-<div class="kicker">{guide.data.game} · {guide.data.category}</div>
+<div class="kicker">{isDiablo?'DIABLO IV · SEASON 15 ONLY':guide.data.game+' · '+guide.data.category}</div>
 <h1>{guide.data.title}</h1>
 <p class="guide-dek">{guide.data.description}</p>
-<div class="guide-header-meta"><span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>Updated {guide.data.updated.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</span></div>
+{isDiablo && <div class="season-lock compact"><strong>Season 15 only.</strong> This guide is maintained for the current S15 setup and does not mix in older-season recommendations.</div>}
+<div class="guide-header-meta">{isDiablo && <span class="season-chip">S15</span>}<span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>Updated {guide.data.updated.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</span></div>
 </div></section>
 <div class="container guide">
 <article class="guide-content">
 <Content />
-{related.length>0 && <section class="related-guides"><div class="kicker">Keep going</div><h2>Related {guide.data.game} guides</h2><div class="mini-grid">{related.map(item=><a class="mini-card" href={'/guides/'+item.id.replace(/\.(md|mdx)$/,'')+'/'}>
-<span>{item.data.category}</span><strong>{item.data.title}</strong></a>)}</div></section>}
+{related.length>0 && <section class="related-guides"><div class="kicker">Keep going</div><h2>Related {guide.data.game} guides</h2><div class="mini-grid">{related.map(item=><a class="mini-card" href={'/guides/'+item.id.replace(/\.(md|mdx)$/,'')+'/'}><span>{isDiablo?'Season 15 · '+item.data.category:item.data.category}</span><strong>{item.data.title}</strong></a>)}</div></section>}
 </article>
 <aside class="sidebar">
 <div class="sidebar-title">GUIDE INFO</div>
+{isDiablo && <div><small>Season</small><strong>Season 15 only</strong></div>}
 <div><small>Game</small>{guide.data.game}</div>
 <div><small>Category</small>{guide.data.category}</div>
 <div><small>Status</small>{guide.data.status}</div>
