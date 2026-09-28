@@ -121,3 +121,179 @@ body{
 }
 .check-guide-link,.reference-card em{color:#74ddff}
 .reference-card:hover em,.check-guide-link:hover{color:var(--accent2)}
+
+
+/* Neon color pass v2 */
+.hero-home{
+  position:relative;
+  overflow:hidden;
+}
+.hero-home:before,
+.hero-home:after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+  border-radius:999px;
+  filter:blur(70px);
+  opacity:.35;
+}
+.hero-home:before{
+  width:340px;height:340px;
+  left:-120px;top:90px;
+  background:rgba(155,92,255,.38);
+}
+.hero-home:after{
+  width:420px;height:420px;
+  right:80px;top:30px;
+  background:rgba(53,207,255,.22);
+}
+.hero-home .container{position:relative;z-index:1}
+
+.stat-row div{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(145deg,rgba(15,26,44,.68),rgba(8,14,24,.72));
+}
+.stat-row div:nth-child(1){border-color:rgba(53,207,255,.24);box-shadow:0 0 18px rgba(53,207,255,.05)}
+.stat-row div:nth-child(2){border-color:rgba(155,92,255,.24);box-shadow:0 0 18px rgba(155,92,255,.05)}
+.stat-row div:nth-child(3){border-color:rgba(255,79,216,.24);box-shadow:0 0 18px rgba(255,79,216,.05)}
+.stat-row div:nth-child(1) strong{color:var(--accent)}
+.stat-row div:nth-child(2) strong{color:#b387ff}
+.stat-row div:nth-child(3) strong{color:var(--pink)}
+
+.hero-panel{
+  border-color:rgba(53,207,255,.28);
+  background:
+    radial-gradient(circle at 100% 0,rgba(53,207,255,.10),transparent 34%),
+    radial-gradient(circle at 0 100%,rgba(155,92,255,.09),transparent 36%),
+    linear-gradient(160deg,rgba(15,25,43,.97),rgba(8,14,25,.97));
+}
+
+.focus-item:nth-of-type(2){background:linear-gradient(90deg,rgba(53,207,255,.055),transparent)}
+.focus-item:nth-of-type(3){background:linear-gradient(90deg,rgba(57,255,136,.045),transparent)}
+.focus-item:nth-of-type(4){background:linear-gradient(90deg,rgba(255,79,216,.045),transparent)}
+.evolution-focus{background:linear-gradient(90deg,rgba(155,92,255,.06),transparent)}
+
+.alt-section{
+  background:
+    radial-gradient(circle at 15% 50%,rgba(155,92,255,.06),transparent 28%),
+    radial-gradient(circle at 85% 40%,rgba(255,79,216,.045),transparent 26%),
+    rgba(255,255,255,.012);
+}
+
+.game-card{
+  min-height:295px;
+}
+.game-card:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--purple));
+  opacity:.9;
+}
+.game-card:nth-child(3n+2):after{background:linear-gradient(90deg,var(--purple),var(--pink))}
+.game-card:nth-child(3n+3):after{background:linear-gradient(90deg,var(--pink),var(--accent2))}
+
+.game-diablo-4{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(53,207,255,.16),transparent 34%),
+    linear-gradient(155deg,#101a2b,#09111e);
+}
+.game-valheim{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(57,255,136,.12),transparent 34%),
+    linear-gradient(155deg,#0e1a20,#09121a);
+}
+.game-voidpet{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(255,79,216,.14),transparent 34%),
+    linear-gradient(155deg,#181127,#0d101d);
+}
+.game-palworld{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(53,207,255,.14),transparent 34%),
+    radial-gradient(circle at 10% 100%,rgba(57,255,136,.06),transparent 30%),
+    linear-gradient(155deg,#101a2a,#09111c);
+}
+.game-ark-asa{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(255,79,216,.10),transparent 34%),
+    radial-gradient(circle at 10% 100%,rgba(53,207,255,.07),transparent 30%),
+    linear-gradient(155deg,#171421,#0b111c);
+}
+.game-starfield{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(155,92,255,.14),transparent 34%),
+    linear-gradient(155deg,#151428,#0a111d);
+}
+.game-grounded{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(57,255,136,.12),transparent 34%),
+    radial-gradient(circle at 10% 100%,rgba(255,79,216,.05),transparent 28%),
+    linear-gradient(155deg,#101b1a,#0a1218);
+}
+.game-cyberpunk-2077{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(255,79,216,.15),transparent 34%),
+    radial-gradient(circle at 10% 100%,rgba(53,207,255,.08),transparent 30%),
+    linear-gradient(155deg,#181124,#0a111b);
+}
+.game-7-days-to-die{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(155,92,255,.12),transparent 34%),
+    linear-gradient(155deg,#171321,#0b111c);
+}
+.game-ac-black-flag{
+  background:
+    radial-gradient(circle at 90% 12%,rgba(53,207,255,.11),transparent 34%),
+    radial-gradient(circle at 10% 100%,rgba(155,92,255,.06),transparent 30%),
+    linear-gradient(155deg,#101725,#0a101a);
+}
+
+.game-card .game-tag{
+  padding:5px 8px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.025);
+}
+.game-card:nth-child(3n+1) .game-tag{color:#8eeaff;border-color:rgba(53,207,255,.2)}
+.game-card:nth-child(3n+2) .game-tag{color:#c8a6ff;border-color:rgba(155,92,255,.2)}
+.game-card:nth-child(3n+3) .game-tag{color:#ff9ee9;border-color:rgba(255,79,216,.2)}
+
+.featured-card:nth-child(4n+1){border-color:rgba(53,207,255,.24)}
+.featured-card:nth-child(4n+2){border-color:rgba(155,92,255,.24)}
+.featured-card:nth-child(4n+3){border-color:rgba(255,79,216,.24)}
+.featured-card:nth-child(4n+4){border-color:rgba(57,255,136,.24)}
+
+.featured-card:nth-child(4n+1) .eyebrow{color:var(--accent)}
+.featured-card:nth-child(4n+2) .eyebrow{color:#bd96ff}
+.featured-card:nth-child(4n+3) .eyebrow{color:#ff8de5}
+.featured-card:nth-child(4n+4) .eyebrow{color:#7dffb1}
+
+.evolution-banner{
+  box-shadow:
+    0 0 36px rgba(155,92,255,.06),
+    inset 0 0 36px rgba(57,255,136,.025);
+}
+
+.section-heading h2{
+  position:relative;
+  display:inline-block;
+}
+.section-heading h2:after{
+  content:"";
+  display:block;
+  width:54px;height:3px;
+  margin-top:10px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--accent2),var(--accent),var(--pink));
+  box-shadow:0 0 12px rgba(53,207,255,.18);
+}
+
+.footer{
+  background:
+    radial-gradient(circle at 20% 100%,rgba(155,92,255,.05),transparent 30%),
+    radial-gradient(circle at 80% 100%,rgba(53,207,255,.04),transparent 30%);
+}
