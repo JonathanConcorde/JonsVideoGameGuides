@@ -1,6 +1,6 @@
 ---
 title: "Blazing Scream Warlock — Season 15 Endgame Guide"
-description: "Season 15-only Blazing Scream Warlock reference with clickable sections for equipment, farming, glyphs, gems, rotation, masterworking, difficulty, and variants."
+description: "Season 15-only MrRonit Blazing Scream PERFECTED reference with exact equipment, farming, glyphs, gems, runes, talisman setup, rotation, and progression."
 game: Diablo IV
 gameSlug: diablo-4
 category: Builds
@@ -10,82 +10,136 @@ featured: true
 order: 1
 ---
 
+## Quick links
+
+[Equipment](#equipment) · [Farming](#farming) · [Glyphs](#glyphs) · [Gems](#gems) · [Runes](#runes) · [Talisman](#talisman) · [Skill bar](#skill-bar) · [Rotation](#rotation) · [Masterworking](#masterworking) · [Difficulty](#difficulty-progression) · [Variants](#variants)
+
 ## Build identity
 
-This is the **Season 15-only** Blazing Scream Warlock master guide.
+This page is the **Season 15-only** master reference for the MrRonit **Blazing Scream Endgame PERFECTED** setup we have been using.
 
-The site should treat this page as the central reference for the build. The Diablo hub checklist links directly into the sections below so you can jump to the part you need while playing.
+The mature version uses **Skull Splitter through Elegy**. The build is not based around Orbital Scream.
 
-The practical goal is constant pressure while moving, with Blazing Scream and Skull Splitter doing the primary work while the rest of the setup creates safe, repeatable damage windows.
+The core play pattern is:
+
+- Keep Metamorphosis active appropriately.
+- Use Dark Prison to set up elite/boss windows.
+- Manually cast Sigil of Subversion when needed to trigger the Nameless interaction.
+- Let Blazing Scream / Skull Splitter create the main damage zone.
+- Use Rampage and Abodian primarily for movement and positioning.
+- Fight from medium range rather than standing directly on top of the target.
 
 ## Equipment
 
-These are the major Season 15 equipment targets currently being tracked for the build.
+This is the exact endgame slot list we built around.
 
-| Item | Primary source / target | Why it matters |
-|---|---|---|
-| Elegy | Lord Zir | Core Blazing Scream setup; central build piece |
-| Infernal Homunculus | Urivar | Core equipment target |
-| Eightfold Idol | Beast in the Ice | Core equipment target |
-| Temerity | Harbinger of Hatred | Important survivability/build target |
-| Moloch's Beating Flame | Butcher | Core build target |
-| Hand of Apotheosis | Bartuc | Core build target |
-| Leoric's Crown | Baal preferred | Helm target |
-| Stone of Jordan | Baal preferred | Ring target |
-| Enigma | Jah + Ith + Ber in the appropriate normal chest base | Runeword target |
+| Slot | Target | Important note | Primary source |
+|---|---|---|---|
+| Helm | **Leoric's Crown** | Endgame helm target | Waking Nightmares, especially Baal |
+| Chest | **Enigma** | Runeword chest | Craft with Jah + Ith + Ber |
+| Gloves | **Hand of Apotheosis** | Core endgame gloves | Bartuc via Infernal Hordes / 666 Aether |
+| Pants | **Temerity** | Core defensive/endgame piece | Harbinger of Hatred |
+| Boots | **Undying Aspect** | Required boot setup | Use correct boots with Undying Aspect |
+| Amulet | **Moloch's Beating Flame** | Pair with **Sadistic Aspect** | Bloodied Butcher |
+| Ring 1 | **Eightfold Idol** | Core ring target | Beast in the Ice |
+| Ring 2 | **Stone of Jordan** | Endgame ring target | Waking Nightmares, especially Baal |
+| Weapon | **Elegy** | Central Blazing Scream / Skull Splitter piece | Lord Zir |
+| Offhand | **Infernal Homunculus** | Core offhand target | Urivar |
 
 ### Equipment priority
 
-Do not treat every missing item as equally urgent.
+The first goal is not perfect rolls. The first goal is to make the complete build function.
 
-The hub checklist intentionally puts the core build pieces first. As you mark items complete, the **What should I do next?** panel moves to the next missing item automatically.
+Use this order:
 
-For any piece:
-
-1. Get a functional version first.
-2. Confirm it preserves the build interaction.
-3. Improve affixes and rolls.
-4. Only then spend heavily on permanent optimization.
+1. Obtain a functional version of the required piece.
+2. Complete the full set of build-defining items.
+3. Improve weak rolls.
+4. Fix secondary stats and survivability.
+5. Spend serious masterworking resources only when the item is likely to stay equipped.
 
 ## Farming
 
-Farm according to the missing piece or bottleneck, not by running the same activity indefinitely.
+### Elegy
 
-### If you are missing a named unique
+**Target:** Lord Zir.
 
-Use the equipment table above to target the relevant boss/source.
+This is one of the highest-priority pieces because it is central to the mature Skull Splitter version of the build.
 
-### If your gear exists but is weak
+### Infernal Homunculus
 
-Shift toward high-volume loot and efficient endgame activity clears rather than repeatedly targeting a boss whose item you already own.
+**Target:** Urivar.
 
-### If your glyphs are behind
+Farm once the broader build loop is already functional enough to kill the target efficiently.
 
-Move to the content that advances glyph progression efficiently.
+### Eightfold Idol
 
-### If materials are the bottleneck
+**Target:** Beast in the Ice.
 
-Target the activity that produces the material blocking your next upgrade.
+Treat this as a direct item target, not a reason to stop all other progression indefinitely.
 
-### If you are dying
+### Temerity
 
-Stop chasing marginal damage and fix survivability first.
+**Target:** Harbinger of Hatred.
 
-### Farming order
+This is both a gear target and part of making the setup feel safer while progressing.
 
-A practical Season 15 sequence is:
+### Moloch's Beating Flame
 
-1. Build-defining uniques
-2. Glyph and Paragon progression
-3. High-value overlapping activities such as Whispers
-4. Targeted material/reward activities
-5. Obducite/masterworking material farming
-6. Helltide and related material/key farming
-7. Boss/Mythic farming once the build is stable enough to do it efficiently
+**Target:** Bloodied Butcher.
+
+The amulet is used with **Sadistic Aspect** in the setup we created.
+
+### Hand of Apotheosis
+
+**Target:** Bartuc through Infernal Hordes, using the 666-Aether path.
+
+### Leoric's Crown / Stone of Jordan
+
+**Target:** Waking Nightmares, with **Baal** as the preferred target we were using.
+
+### Enigma
+
+**Recipe:** Jah + Ith + Ber.
+
+Use the appropriate normal chest base.
+
+For Legacy Runes, the prior farming plan emphasized:
+
+- Countess
+- Cube conversions
+
+### General Season 15 farming loop
+
+Use this priority order after level 70:
+
+1. **Target-farm build-enabling Uniques**
+2. **Pit for Glyphs + Paragon**
+3. **Overlap Whispers whenever possible**
+4. **Undercity for targeted rewards / Paragon / materials**
+5. **Nightmare Dungeons specifically for Obducite**
+6. **Helltide for keys and materials**
+7. **Boss / Mythic farming once the build is stable enough to do it efficiently**
+
+Because Blazing Scream clears quickly, **fast Pit farming** is especially valuable when glyphs and Paragon are still behind.
+
+### War Plans
+
+Use the Season 15 War Plan that matches the resource you currently need:
+
+- **Diablo:** Helltide + Hordes
+- **Baal:** Undercity + Lair Bosses
+- **Mephisto:** Pit + Nightmare Dungeons
+
+Use **Mephisto** when glyph/Pit progression is the bottleneck.
+
+Use **Baal** when targeted unique/boss progression is the priority.
+
+Use **Diablo** when Helltide/Hordes efficiency is the current need.
 
 ## Glyphs
 
-Current priority order:
+Exact priority order:
 
 1. **Eldritch Sight**
 2. **Demonologist**
@@ -93,79 +147,116 @@ Current priority order:
 4. **Hellforge**
 5. **Attrition**
 
-The goal is to bring the important glyphs online together rather than over-leveling one while the rest lag behind.
+### Leveling rule
 
-A useful checkpoint is getting the key glyphs to roughly the **50/51 range** before heavily specializing further.
+Do not max one glyph while the others remain far behind.
+
+The approach we settled on was:
+
+- Bring all important glyphs to about **50**
+- Then push them through the **50/51 breakpoint**
+- Only after the key glyphs are established should you heavily specialize further
+
+This gives a much stronger overall board than over-investing in the first glyph while leaving the rest underdeveloped.
 
 ## Gems
 
-Current Season 15 setup being tracked:
+The exact gem setup we were using:
 
-- **Weapon / Jewelry:** Ruby
-- **Armor:** Sapphire
+- **Weapon:** Royal Ruby
+- **Armor:** Royal Sapphire
+- **Jewelry:** Royal Ruby
 
-Use the checklist on the Diablo hub to mark this complete once the correct gems are installed across the build.
+The jewelry Ruby choice is being used for the fire-resistance contribution in this setup.
 
-## Rotation
+## Runes
 
-The core combat priority is:
+Primary rune pairs:
 
-**Metamorphosis uptime → Dark Prison → manually cast the Sigil for the Nameless bonus → Blazing Scream / Skull Splitter**
+- **Nagu + Tir**
+- **Cir + Mot**
 
-Rampage / Abodian support movement and positioning rather than replacing the main damage sequence.
+Alternative noted for the first pair:
 
-### Packs
+- **Igni + Tir**
 
-1. Enter with Metamorphosis available or active as required by the setup.
-2. Establish Dark Prison when it creates a meaningful damage window.
-3. Manually cast the Sigil so the intended bonus is active.
-4. Generate Blazing Scream / Skull Splitter pressure.
-5. Keep moving while the skulls clear.
-6. Reset cleanly rather than standing still between windows.
-
-### Elites
-
-Use the same sequence, but be more deliberate with Dark Prison and positioning. The objective is to keep the elite inside the effective damage area long enough for the skull engine to work.
-
-### Bosses
-
-Boss fights become a repetition exercise:
-
-1. Establish the required setup.
-2. Commit the damage window.
-3. Avoid mechanics without wasting the next setup.
-4. Restore resources/cooldowns.
-5. Repeat.
-
-Do not force a bad window just because one cooldown is available.
-
-## Skill setup
-
-The exact bar depends on the Season 15 variant being used, but the current master guide is built around the Blazing Scream endgame family with:
-
-- Blazing Scream
-- Dark Prison
-- Metamorphosis
-- Rampage
-- A manually cast Sigil
-- A summon / supporting damage slot
-
-This page should not mix in older-season skill bars.
+Use the primary pair unless the alternative better fits the exact version you are currently running.
 
 ## Talisman
 
-The tracked talisman setup centers on:
+The talisman setup we created:
 
-- **Abaddon's Flesh**
-- **Nameless**
+- **Abaddon's Flesh 4**
+- **Nameless 2**
+- **Diamond Mind Seal**
 
-Priority emphasis includes:
+Priority emphasis:
 
 - Hellfire ranks
 - Demonology ranks
 - Maximum Life
 
-The manual Sigil cast in the rotation matters because of the interaction being used in the build.
+The Nameless setup is why the guide specifically calls for a **manual Sigil cast** during the important damage sequence.
+
+## Skill bar
+
+Final bar:
+
+- **Blazing Scream**
+- **Dark Prison**
+- **Rampage**
+- **Metamorphosis**
+- **Summon Abodian**
+- **Sigil of Subversion**
+
+### Metamorphosis
+
+Use **Destruction Demon** as the combat-form priority.
+
+### Dark Prison
+
+Use **Chain Aura** on cooldown as appropriate to the fight.
+
+### Rampage / Abodian
+
+These are primarily movement and positioning tools in this setup.
+
+Do not treat them as the main source of damage.
+
+## Rotation
+
+### General movement / packs
+
+1. Keep **Metamorphosis** active as appropriate.
+2. Cast **Blazing Scream while moving**.
+3. Let Skull Splitter / skull pressure clear the pack.
+4. Stay mobile rather than stopping to force damage.
+5. Reposition with Rampage / Abodian as needed.
+
+### Elites
+
+1. Metamorphosis active.
+2. **Dark Prison**.
+3. **Manually cast Sigil of Subversion** if needed to activate the Nameless set bonus.
+4. **Blazing Scream**.
+5. Keep the elite inside the skull damage zone.
+6. Reposition instead of face-tanking outside the damage window.
+
+### Bosses
+
+1. Enter with Metamorphosis active/ready.
+2. Dark Prison.
+3. Manual Sigil cast for the Nameless interaction.
+4. Blazing Scream / Skull Splitter.
+5. Maintain medium range.
+6. Use Rampage / Abodian to reposition around mechanics.
+7. Rebuild the next damage window instead of forcing bad uptime.
+
+### Positioning
+
+The skull field is the damage zone.
+
+The build feels better when you are fighting from **medium range** and steering enemies into the skull pressure rather than standing directly on top of them.
 
 ## Masterworking
 
@@ -174,68 +265,94 @@ Do not aggressively masterwork temporary pieces.
 Use this order:
 
 1. Functional placeholder
-2. Correct base item
-3. Correct key affixes
-4. Strong rolls
+2. Correct named/base item
+3. Correct important rolls
+4. Strong enough version to keep
 5. Masterworking
 6. Expensive rerolling / min-maxing
 
-The hub checklist marks masterworking as an **optimization** step, so it should not outrank missing build-defining gear or unfinished glyphs.
+The major mistake to avoid is spending premium resources on a piece you already know will be replaced by one of the named targets above.
 
 ## Difficulty progression
 
-Increase difficulty only when the current tier is controlled.
+Use the highest difficulty where the build remains efficient.
 
 Move up when:
 
-- Normal packs die quickly.
-- Elites do not stall the run.
-- Bosses are controlled.
+- Packs die quickly.
+- Elites do not bog down the run.
+- Bosses remain controlled.
 - Defensive failures are rare.
-- Clear speed remains efficient.
+- Pit clears stay fast enough to justify the higher tier.
 
-If the next tier dramatically slows routine content, step back down and farm faster.
+If the higher tier turns routine content into long fights, step back down and farm faster.
+
+The goal is progression per hour, not proving that the build can technically survive a higher difficulty.
+
+## Season 15 progression systems
+
+### Whispers
+
+Prioritize activities that overlap with Whispers when possible.
+
+In Season 15, Whispers are worth incorporating because they contribute meaningful XP, gold, and materials while you are already completing other content.
+
+### Key Caches
+
+The prior Season 15 plan specifically valued Key Caches because they can contribute:
+
+- Tributes
+- Sigil Dust
+- Possible Mephisto Keys / Traces
+
+### Undercity
+
+Use Undercity when you want targeted rewards, Paragon progression, or material-focused runs.
+
+Refinement Tributes are particularly relevant when Forgotten Souls are the bottleneck.
+
+### Nightmare Dungeons
+
+Use NMDs specifically when **Obducite** is what is blocking the next masterworking step.
+
+### Pit
+
+Pit is the main place to prioritize when:
+
+- Glyph levels are behind
+- Paragon needs work
+- You can clear quickly enough for the run to remain efficient
 
 ## Variants
 
-Season 15 Blazing Scream can be adapted for different goals.
+The site is using **MrRonit's Season 15 Endgame PERFECTED** as the canonical build baseline.
+
+Other versions may exist, but they should not be silently blended into this page.
 
 ### Starter / Midgame
 
-Use while the complete endgame gear package is not yet assembled.
+Use only while the full endgame gear package is incomplete.
 
 ### Endgame PERFECTED
 
-This is the primary baseline being tracked on this site.
+This is the primary reference for the site and the checklist.
 
 ### Speed Farm
 
-Use when movement and pack clear matter more than maximum push performance.
-
-### Tank
-
-Use when consistency and survivability are more valuable than marginal damage.
+Use a speed-oriented version only when the goal is fast routine clears.
 
 ### Push
 
-Use for the hardest content where maximum performance matters more than everyday farming speed.
+Use a push setup only when you are deliberately attempting the hardest content.
 
-The site should always identify which Season 15 variant a recommendation belongs to instead of silently mixing multiple variants.
+The site's equipment checklist and progression recommendations should always default to the PERFECTED endgame baseline unless a section explicitly says otherwise.
 
 ## What should I do next?
 
 Use the checklist on the **Diablo IV Season 15 hub**.
 
-The tracker remembers:
+The tracker is intended to answer one question:
 
-- Which core equipment you already have
-- Which glyph milestones are complete
-- Whether gems are set
-- Whether the rotation is functioning
-- Whether you have reached the masterworking stage
+> What is the highest-priority thing I am still missing?
 
-It then surfaces the first incomplete priority and links directly back to the relevant section of this guide.
-
-## Related guides
-
-Use the **Fresh Level 70 Warlock Roadmap** for overall post-70 order and **What to Keep, Salvage, and Save** for stash decisions.
+It tracks equipment, glyphs, gems, runes, talisman setup, rotation readiness, and late optimization, then links directly back into the relevant section of this guide.
