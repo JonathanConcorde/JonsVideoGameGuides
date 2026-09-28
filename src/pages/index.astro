@@ -2,11 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 const guides=(await getCollection('guides')).sort((a,b)=>b.data.updated.valueOf()-a.data.updated.valueOf());
-const featured=guides.filter(g=>g.data.featured).slice(0,4);
+const featured=guides.filter(g=>g.data.featured).slice(0,6);
 const games=[
  {name:'Diablo IV',slug:'diablo-4',tag:'Seasonal ARPG',mark:'D4',description:'Warlock builds, leveling, endgame farming, gear priorities, rotations, and inventory decisions.'},
- {name:'Valheim',slug:'valheim',tag:'Survival',mark:'V',description:'Biome-by-biome progression, base planning, bosses, gear, exploration, and practical preparation.'},
- {name:'Voidpet',slug:'voidpet',tag:'Boss Progression',mark:'VP',description:'Stage-specific teams, pet investment priorities, equipment choices, and boss mechanics.'}
+ {name:'Valheim',slug:'valheim',tag:'Survival',mark:'V',description:'Biome-by-biome progression, base planning, bosses, gear, exploration, and preparation.'},
+ {name:'Voidpet',slug:'voidpet',tag:'Boss Progression',mark:'VP',description:'Stage-specific teams, pet investment priorities, equipment choices, and boss mechanics.'},
+ {name:'Palworld',slug:'palworld',tag:'Creature Survival',mark:'PW',description:'Base automation, breeding, combat Pals, mounts, and long-term progression.'},
+ {name:'ARK: Survival Ascended',slug:'ark-asa',tag:'Survival',mark:'ARK',description:'Single-player PvE progression, taming, equipment, bases, and boss preparation.'},
+ {name:'Starfield',slug:'starfield',tag:'RPG / Outposts',mark:'SF',description:'NG+ progression, linked outposts, manufacturing chains, XP, and credits.'},
+ {name:'Grounded',slug:'grounded',tag:'Survival',mark:'G',description:'Laboratory progression, equipment, preparation, exploration, and base efficiency.'},
+ {name:'Cyberpunk 2077',slug:'cyberpunk-2077',tag:'Action RPG',mark:'CP',description:'Katana and Sandevistan progression, cyberware, mobility, and combat flow.'},
+ {name:'7 Days to Die',slug:'7-days-to-die',tag:'Survival',mark:'7D',description:'Navezgane base planning, early progression, crafting, looting, and horde prep.'},
+ {name:"Assassin's Creed IV: Black Flag",slug:'ac-black-flag',tag:'Action Adventure',mark:'AC',description:'Jackdaw upgrades, side-content priorities, resources, and efficient story progression.'}
 ];
 ---
 <BaseLayout>
