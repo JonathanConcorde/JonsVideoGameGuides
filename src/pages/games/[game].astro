@@ -15,6 +15,21 @@ const gameMeta = {
  'ac-black-flag':{label:'Action Adventure',intro:'Jackdaw upgrades, side-content priorities, resource efficiency, and a clean route through the main story.',mark:'AC'}
 };
 
+const diabloQuickLinks = [
+  { label:'Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Exact PERFECTED slot list + sources' },
+  { label:'Farming', href:'/guides/diablo-4-blazing-scream/#farming', note:'Boss targets + activity loop' },
+  { label:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'Order and 50/51 breakpoint' },
+  { label:'Gems', href:'/guides/diablo-4-blazing-scream/#gems', note:'Royal Ruby / Sapphire setup' },
+  { label:'Runes', href:'/guides/diablo-4-blazing-scream/#runes', note:'Nagu+Tir · Cir+Mot' },
+  { label:'Talisman', href:'/guides/diablo-4-blazing-scream/#talisman', note:"Abaddon's Flesh + Nameless" },
+  { label:'Skill Bar', href:'/guides/diablo-4-blazing-scream/#skill-bar', note:'Exact PERFECTED bar' },
+  { label:'Rotation', href:'/guides/diablo-4-blazing-scream/#rotation', note:'Packs · elites · bosses' },
+  { label:'Masterworking', href:'/guides/diablo-4-blazing-scream/#masterworking', note:'When to invest materials' },
+  { label:'Level 70 Roadmap', href:'/guides/diablo-4-warlock-fresh-70/#first-priorities', note:'What activity to do next' },
+  { label:'Pit / Glyph Route', href:'/guides/diablo-4-warlock-fresh-70/#pit', note:'Efficient progression loop' },
+  { label:'Keep / Salvage', href:'/guides/diablo-4-inventory-uniques-keys/#uniques', note:'Inventory and key decisions' }
+];
+
 const diabloChecklist = [
   { id:'elegy', label:'Elegy', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Lord Zir · central Skull Splitter piece', priority:1 },
   { id:'infernal-homunculus', label:'Infernal Homunculus', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Urivar · core offhand target', priority:2 },
@@ -86,6 +101,13 @@ const isDiablo=game==='diablo-4';
     </div>)}
   </div>
   <div class="tracker-actions"><button id="reset-progress" class="button secondary" type="button">Reset Season 15 checklist</button></div>
+</div></section>}
+
+{isDiablo && <section class="section s15-reference"><div class="container">
+  <div class="section-heading"><div><div class="kicker">Season 15 reference</div><h2>Jump straight to what you need</h2><p class="section-copy">Every button opens the exact section of the detailed guide.</p></div></div>
+  <div class="reference-grid">
+    {diabloQuickLinks.map(item=><a class="reference-card" href={item.href}><strong>{item.label}</strong><span>{item.note}</span><em>Open section →</em></a>)}
+  </div>
 </div></section>}
 
 <div id="guides">{categories.map(category=><section class="section"><div class="container"><div class="section-heading"><div><div class="kicker">{isDiablo?'Season 15 guide category':'Guide category'}</div><h2>{category}</h2></div></div><div class="guide-list">{guides.filter(g=>g.data.category===category).map((guide,index)=><a class="guide-row" href={'/guides/'+guide.id.replace(/\.(md|mdx)$/,'')+'/'}><span class="guide-number">{String(index+1).padStart(2,'0')}</span><div class="guide-row-copy"><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div><div class="guide-row-meta">{isDiablo && <span class="season-chip">S15</span>}<span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>→</span></div></a>)}</div></div></section>)}</div>
