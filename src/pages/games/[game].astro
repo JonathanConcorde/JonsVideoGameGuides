@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+const gameMeta = {
+  'diablo-4': { label:'Seasonal ARPG', intro:'Warlock builds, leveling, farming, gear decisions, and endgame systems organized around the current season.', mark:'D4' },
+  'valheim': { label:'Survival Progression', intro:'A practical roadmap for base building, biomes, bosses, gear, food, exploration, and safe expansion.', mark:'V' },
+  'voidpet': { label:'Boss Progression', intro:'Stage-specific teams, pet investment, equipment, elemental matchups, and boss mechanics.', mark:'VP' }
+};
 export async function getStaticPaths(){
  const guides = await getCollection('guides');
  const slugs = [...new Set(guides.map(g=>g.data.gameSlug))];
@@ -10,8 +15,21 @@ const { game } = Astro.params;
 const guides = (await getCollection('guides')).filter(g=>g.data.gameSlug===game).sort((a,b)=>a.data.order-b.data.order);
 const gameName = guides[0]?.data.game ?? game;
 const categories = [...new Set(guides.map(g=>g.data.category))];
+const meta = gameMeta[game] ?? {label:'Game Hub',intro:'Guides, progression notes, and reference material.',mark:'GG'};
 ---
-<BaseLayout title={`${gameName} | Jon's Game Guides`}>
-<section class="hero"><div class="container"><div class="kicker">Game Hub</div><h1>{gameName}</h1><p>{guides.length} guide{guides.length===1?'':'s'} currently in the library.</p></div></section>
-{categories.map(category => <section class="section"><div class="container"><h2>{category}</h2><div class="list">{guides.filter(g=>g.data.category===category).map(guide => <a class="list-item" href={`/guides/${guide.id.replace(/\.(md|mdx)$/,'')}/`}><div><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div><span>{guide.data.status}</span></a>)}</div></div></section>)}
+<BaseLayout title={gameName + " | Jon's Game Guides"}>
+<section class="game-hero"><div class="container game-hero-grid">
+<div class="game-hero-mark">{meta.mark}</div>
+<div><div class="kicker">{meta.label}</div><h1>{gameName}</h1><p>{meta.intro}</p><div class="hero-actions"><a class="button primary" href="#guides">Browse {guides.length} {guides.length===1?'guide':'guides'}</a><a class="button secondary" href="/guides/">All games</a></div></div>
+</div></section>
+<div id="guides">
+{categories.map(category => <section class="section"><div class="container">
+<div class="section-heading"><div><div class="kicker">Guide category</div><h2>{category}</h2></div></div>
+<div class="guide-list">{guides.filter(g=>g.data.category===category).map((guide,index)=><a class="guide-row" href={'/guides/'+guide.id.replace(/\.(md|mdx)$/,'')+'/'}>
+<span class="guide-number">{String(index+1).padStart(2,'0')}</span>
+<div class="guide-row-copy"><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div>
+<div class="guide-row-meta"><span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>→</span></div>
+</a>)}</div>
+</div></section>)}
+</div>
 </BaseLayout>
