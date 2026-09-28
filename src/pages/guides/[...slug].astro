@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths(){
+ const guides = await getCollection('guides');
+ return guides.map(guide=>({params:{slug:guide.id.replace(/\.(md|mdx)$/,'')},props:{guide}}));
+}
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+---
+<BaseLayout title={`${guide.data.title} | Jon's Game Guides`} description={guide.data.description}>
+<div class="container guide">
+<article>
+  <div class="kicker">{guide.data.game} · {guide.data.category}</div>
+  <h1>{guide.data.title}</h1>
+  <p>{guide.data.description}</p>
+  <Content />
+</article>
+<aside class="sidebar">
+  <div><small>Game</small>{guide.data.game}</div>
+  <div><small>Category</small>{guide.data.category}</div>
+  <div><small>Status</small>{guide.data.status}</div>
+  <div><small>Last Updated</small>{guide.data.updated.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</div>
+  <a class="pill" href={`/games/${guide.data.gameSlug}/`}>← {guide.data.game} hub</a>
+</aside>
+</div>
+</BaseLayout>

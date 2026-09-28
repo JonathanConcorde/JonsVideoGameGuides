@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+const { title = "Jon's Game Guides", description = 'Practical game guides, builds, progression routes, and reference notes.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/">JON'S GAME GUIDES</a>
+    <nav class="nav-links">
+      <a href="/#games">Games</a>
+      <a href="/#recent">Recent Guides</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+</header>
+<main><slot /></main>
+<footer class="footer"><div class="container">Built as a personal, evolving game-guide library.</div></footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths(){
+ const guides = await getCollection('guides');
+ const slugs = [...new Set(guides.map(g=>g.data.gameSlug))];
+ return slugs.map(game=>({params:{game}}));
+}
+const { game } = Astro.params;
+const guides = (await getCollection('guides')).filter(g=>g.data.gameSlug===game).sort((a,b)=>a.data.order-b.data.order);
+const gameName = guides[0]?.data.game ?? game;
+const categories = [...new Set(guides.map(g=>g.data.category))];
+---
+<BaseLayout title={`${gameName} | Jon's Game Guides`}>
+<section class="hero"><div class="container"><div class="kicker">Game Hub</div><h1>{gameName}</h1><p>{guides.length} guide{guides.length===1?'':'s'} currently in the library.</p></div></section>
+{categories.map(category => <section class="section"><div class="container"><h2>{category}</h2><div class="list">{guides.filter(g=>g.data.category===category).map(guide => <a class="list-item" href={`/guides/${guide.id.replace(/\.(md|mdx)$/,'')}/`}><div><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div><span>{guide.data.status}</span></a>)}</div></div></section>)}
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const guides = (await getCollection('guides')).sort((a,b)=>b.data.updated.valueOf()-a.data.updated.valueOf());
+const games = [
+  { name:'Diablo IV', slug:'diablo-4', description:'Builds, leveling, endgame farming, gear priorities, and combat strategy.' },
+  { name:'Valheim', slug:'valheim', description:'Biome progression, gear, bosses, exploration, and survival priorities.' },
+  { name:'Voidpet', slug:'voidpet', description:'Boss progression, pet priorities, equipment, and stage-specific planning.' }
+];
+---
+<BaseLayout>
+  <section class="hero"><div class="container">
+    <div class="kicker">Personal Strategy Library</div>
+    <h1>Game guides built for actually playing.</h1>
+    <p>Progression plans, builds, farming routes, boss strategies, equipment priorities, and reference notes—organized so the answer you need is easy to find mid-game.</p>
+  </div></section>
+  <section class="section" id="games"><div class="container">
+    <h2>Games</h2>
+    <div class="grid">
+      {games.map(game => {
+        const count = guides.filter(g=>g.data.gameSlug===game.slug).length;
+        return <a class="card" href={`/games/${game.slug}/`}>
+          <div class="eyebrow">{count} {count===1?'Guide':'Guides'}</div>
+          <h3>{game.name}</h3>
+          <p>{game.description}</p>
+          <div class="meta"><span class="pill">View game hub →</span></div>
+        </a>
+      })}
+    </div>
+  </div></section>
+  <section class="section" id="recent"><div class="container">
+    <h2>Recently Updated</h2>
+    <div class="list">
+      {guides.slice(0,6).map(guide => <a class="list-item" href={`/guides/${guide.id.replace(/\.(md|mdx)$/,'')}/`}>
+        <div><strong>{guide.data.title}</strong><span>{guide.data.game} · {guide.data.category}</span></div>
+        <span>{guide.data.updated.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</span>
+      </a>)}
+    </div>
+  </div></section>
+</BaseLayout>
