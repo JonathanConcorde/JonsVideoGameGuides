@@ -1,7 +1,7 @@
 ---
-title: Assassin's Creed IV: Black Flag — Upgrade Priority Guide
-description: A main-story-friendly upgrade path focused on the Jackdaw, useful side content, resource efficiency, and avoiding low-value detours.
-game: Assassin's Creed IV: Black Flag
+title: "Assassin's Creed IV: Black Flag — Upgrade Priority Guide"
+description: "A main-story-friendly upgrade path focused on the Jackdaw, useful side content, resource efficiency, and avoiding low-value detours."
+game: "Assassin's Creed IV: Black Flag"
 gameSlug: ac-black-flag
 category: Progression
 updated: 2026-09-28
