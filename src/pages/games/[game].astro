@@ -2,34 +2,25 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 const gameMeta = {
-  'diablo-4': { label:'Seasonal ARPG', intro:'Warlock builds, leveling, farming, gear decisions, and endgame systems organized around the current season.', mark:'D4' },
-  'valheim': { label:'Survival Progression', intro:'A practical roadmap for base building, biomes, bosses, gear, food, exploration, and safe expansion.', mark:'V' },
-  'voidpet': { label:'Boss Progression', intro:'Stage-specific teams, pet investment, equipment, elemental matchups, and boss mechanics.', mark:'VP' }
+ 'diablo-4':{label:'Seasonal ARPG',intro:'Warlock builds, leveling, farming, gear decisions, and endgame systems organized around the current season.',mark:'D4'},
+ 'valheim':{label:'Survival Progression',intro:'A practical roadmap for base building, biomes, bosses, gear, food, exploration, and safe expansion.',mark:'V'},
+ 'voidpet':{label:'Boss Progression',intro:'Stage-specific teams, pet investment, equipment, elemental matchups, and boss mechanics.',mark:'VP'},
+ 'palworld':{label:'Creature Survival',intro:'Base automation, breeding, useful Pals, mounts, combat progression, and endgame organization.',mark:'PW'},
+ 'ark-asa':{label:'Survival Progression',intro:'Single-player PvE planning for taming, equipment, bases, resource routes, breeding, and boss preparation.',mark:'ARK'},
+ 'starfield':{label:'RPG / Outposts',intro:'NG+ progression, resource networks, linked outposts, manufacturing chains, XP, and credits.',mark:'SF'},
+ 'grounded':{label:'Survival Progression',intro:'A practical route through equipment, laboratories, preparation, exploration, and base upgrades.',mark:'G'},
+ 'cyberpunk-2077':{label:'Build Progression',intro:'Katana and Sandevistan progression focused on blades, mobility, cyberware, survivability, and encounter control.',mark:'CP'},
+ '7-days-to-die':{label:'Survival Progression',intro:'Navezgane planning for bases, looting, crafting, transportation, and early Blood Moon survival.',mark:'7D'},
+ 'ac-black-flag':{label:'Action Adventure',intro:'Jackdaw upgrades, side-content priorities, resource efficiency, and a clean route through the main story.',mark:'AC'}
 };
-export async function getStaticPaths(){
- const guides = await getCollection('guides');
- const slugs = [...new Set(guides.map(g=>g.data.gameSlug))];
- return slugs.map(game=>({params:{game}}));
-}
-const { game } = Astro.params;
-const guides = (await getCollection('guides')).filter(g=>g.data.gameSlug===game).sort((a,b)=>a.data.order-b.data.order);
-const gameName = guides[0]?.data.game ?? game;
-const categories = [...new Set(guides.map(g=>g.data.category))];
-const meta = gameMeta[game] ?? {label:'Game Hub',intro:'Guides, progression notes, and reference material.',mark:'GG'};
+export async function getStaticPaths(){const guides=await getCollection('guides');const slugs=[...new Set(guides.map(g=>g.data.gameSlug))];return slugs.map(game=>({params:{game}}));}
+const {game}=Astro.params;
+const guides=(await getCollection('guides')).filter(g=>g.data.gameSlug===game).sort((a,b)=>a.data.order-b.data.order);
+const gameName=guides[0]?.data.game??game;
+const categories=[...new Set(guides.map(g=>g.data.category))];
+const meta=gameMeta[game]??{label:'Game Hub',intro:'Guides, progression notes, and reference material.',mark:'GG'};
 ---
-<BaseLayout title={gameName + " | Jon's Game Guides"}>
-<section class="game-hero"><div class="container game-hero-grid">
-<div class="game-hero-mark">{meta.mark}</div>
-<div><div class="kicker">{meta.label}</div><h1>{gameName}</h1><p>{meta.intro}</p><div class="hero-actions"><a class="button primary" href="#guides">Browse {guides.length} {guides.length===1?'guide':'guides'}</a><a class="button secondary" href="/guides/">All games</a></div></div>
-</div></section>
-<div id="guides">
-{categories.map(category => <section class="section"><div class="container">
-<div class="section-heading"><div><div class="kicker">Guide category</div><h2>{category}</h2></div></div>
-<div class="guide-list">{guides.filter(g=>g.data.category===category).map((guide,index)=><a class="guide-row" href={'/guides/'+guide.id.replace(/\.(md|mdx)$/,'')+'/'}>
-<span class="guide-number">{String(index+1).padStart(2,'0')}</span>
-<div class="guide-row-copy"><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div>
-<div class="guide-row-meta"><span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>→</span></div>
-</a>)}</div>
-</div></section>)}
-</div>
+<BaseLayout title={gameName+" | Jon's Game Guides"}>
+<section class="game-hero"><div class="container game-hero-grid"><div class="game-hero-mark">{meta.mark}</div><div><div class="kicker">{meta.label}</div><h1>{gameName}</h1><p>{meta.intro}</p><div class="hero-actions"><a class="button primary" href="#guides">Browse {guides.length} {guides.length===1?'guide':'guides'}</a><a class="button secondary" href="/guides/">All games</a></div></div></div></section>
+<div id="guides">{categories.map(category=><section class="section"><div class="container"><div class="section-heading"><div><div class="kicker">Guide category</div><h2>{category}</h2></div></div><div class="guide-list">{guides.filter(g=>g.data.category===category).map((guide,index)=><a class="guide-row" href={'/guides/'+guide.id.replace(/\.(md|mdx)$/,'')+'/'}><span class="guide-number">{String(index+1).padStart(2,'0')}</span><div class="guide-row-copy"><strong>{guide.data.title}</strong><span>{guide.data.description}</span></div><div class="guide-row-meta"><span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>→</span></div></a>)}</div></div></section>)}</div>
 </BaseLayout>
