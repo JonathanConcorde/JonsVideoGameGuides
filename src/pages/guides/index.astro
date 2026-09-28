@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const guides=(await getCollection('guides')).sort((a,b)=>b.data.updated.valueOf()-a.data.updated.valueOf());
+const games=[...new Set(guides.map(g=>g.data.game))];
+---
+<BaseLayout title="All Guides | Jon's Game Guides">
+<section class="hero compact-hero"><div class="container"><div class="kicker">Complete library</div><h1>All guides</h1><p>Search by title, game, category, or topic.</p></div></section>
+<section class="section"><div class="container">
+<div class="library-tools">
+<input id="guide-search" class="search-input" type="search" placeholder="Search guides..." aria-label="Search guides" />
+<div class="filter-row"><button class="filter-button active" data-filter="all">All</button>{games.map(game=><button class="filter-button" data-filter={game}>{game}</button>)}</div>
+</div>
+<div class="guide-library" id="guide-library">
+{guides.map(guide=><a class="library-card" data-game={guide.data.game} data-search={(guide.data.title+' '+guide.data.game+' '+guide.data.category+' '+guide.data.description).toLowerCase()} href={'/guides/'+guide.id.replace(/\.(md|mdx)$/,'')+'/'}>
+<div><span class="eyebrow">{guide.data.game} · {guide.data.category}</span><h3>{guide.data.title}</h3><p>{guide.data.description}</p></div>
+<div class="library-card-meta"><span class={'status status-'+guide.data.status.toLowerCase().replace(' ','-')}>{guide.data.status}</span><span>{guide.data.updated.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</span></div>
+</a>)}
+</div><p id="no-results" class="no-results" hidden>No guides match that search yet.</p>
+</div></section>
+<script>
+const search=document.querySelector('#guide-search');
+const cards=[...document.querySelectorAll('.library-card')];
+const buttons=[...document.querySelectorAll('.filter-button')];
+const noResults=document.querySelector('#no-results');
+let activeGame='all';
+function applyFilters(){const term=search.value.trim().toLowerCase();let visible=0;cards.forEach(card=>{const gameMatch=activeGame==='all'||card.dataset.game===activeGame;const textMatch=!term||card.dataset.search.includes(term);const show=gameMatch&&textMatch;card.hidden=!show;if(show)visible++;});noResults.hidden=visible!==0;}
+search.addEventListener('input',applyFilters);
+buttons.forEach(button=>button.addEventListener('click',()=>{activeGame=button.dataset.filter;buttons.forEach(b=>b.classList.toggle('active',b===button));applyFilters();}));
+</script>
+</BaseLayout>
