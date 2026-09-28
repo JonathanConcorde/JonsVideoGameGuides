@@ -6,22 +6,26 @@ const { title = "Jon's Game Guides", description = 'Practical game guides, build
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
+  <meta name="theme-color" content="#080b12" />
   <title>{title}</title>
 </head>
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="/">JON'S GAME GUIDES</a>
-    <nav class="nav-links">
-      <a href="/#games">Games</a>
-      <a href="/#recent">Recent Guides</a>
-      <a href="/about">About</a>
+    <a class="brand" href="/" aria-label="Jon's Game Guides home">
+      <span class="brand-mark">JG</span><span>JON'S GAME GUIDES</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/#games">Games</a><a href="/guides/">All Guides</a><a href="/evolution/">Evolution</a><a href="/about/">About</a>
     </nav>
   </div>
 </header>
 <main><slot /></main>
-<footer class="footer"><div class="container">Built as a personal, evolving game-guide library.</div></footer>
+<footer class="footer"><div class="container footer-grid">
+  <div><strong>JON'S GAME GUIDES</strong><span>Practical notes for the games I'm actually playing.</span></div>
+  <div class="footer-links"><a href="/guides/">All Guides</a><a href="/evolution/">Evolution</a><a href="/about/">About</a></div>
+</div></footer>
 </body>
 </html>
