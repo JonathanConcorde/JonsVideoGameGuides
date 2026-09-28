@@ -1,6 +1,6 @@
 ---
-title: Blazing Scream Warlock — Endgame Guide
-description: A practical Season 15 framework for gear, farming, combat priorities, and endgame progression once the Blazing Scream setup is established.
+title: "Blazing Scream Warlock — Season 15 Endgame Guide"
+description: "A practical Season 15 framework for Blazing Scream gear, farming, combat priorities, variants, and endgame progression."
 game: Diablo IV
 gameSlug: diablo-4
 category: Builds
@@ -10,83 +10,154 @@ featured: true
 order: 1
 ---
 
-## What this guide is for
+## Build identity
 
-This is the permanent home for the Blazing Scream Warlock setup once the character has reached endgame. The goal is not to duplicate a build planner; it is to answer the decisions that come up while actually playing: **what do I farm next, what upgrades matter, and how should I approach combat?**
+Blazing Scream remains one of the major Warlock archetypes in Season 15.
 
-## Immediate priorities
+The build revolves around creating repeated Blazing Scream skulls while maintaining the effects that let those skulls multiply, persist, and clear large areas.
+
+The practical goal is **constant pressure while moving**, not standing still to cast one giant hit.
+
+## Current endgame skill core
+
+The exact setup changes by variant, but current endgame versions commonly center on:
+
+- Blazing Scream
+- Dark Prison
+- Metamorphosis
+- Rampage
+- A Sigil choice
+- A summon or additional damage tool
+
+Different variants shift toward speed farming, pushing, survivability, or controller-friendly play.
+
+## Immediate priorities at 70
 
 | Priority | Goal |
 |---|---|
-| 1 | Make sure the full build loop functions reliably |
-| 2 | Secure the core build-enabling equipment |
-| 3 | Level the most important glyphs |
-| 4 | Fix weak affixes and defensive gaps |
-| 5 | Improve gems, sockets, and secondary optimization |
-| 6 | Masterwork pieces that are unlikely to be replaced |
-| 7 | Push higher-difficulty content only when clear speed remains efficient |
+| 1 | Make the core Blazing Scream loop function reliably |
+| 2 | Secure the build-enabling equipment |
+| 3 | Establish survivability before pushing difficulty |
+| 4 | Level the important glyphs |
+| 5 | Fix weak affixes |
+| 6 | Improve gems and socketing |
+| 7 | Masterwork pieces that are unlikely to be replaced |
+| 8 | Push harder content only when clear speed remains efficient |
 
-## Combat priorities
+## How to play the build
 
-Think of the build in phases rather than as a button sequence.
+### Enter with a plan
 
-### 1. Establish the fight
+Do not spend your strongest setup effects on the first weak enemy you see. Enter a pack with the pieces of the rotation available.
 
-Enter with your important setup effects available. Do not waste the strongest part of the build moving between scattered enemies or opening on a low-value target.
+### Create skull pressure
 
-### 2. Group or select priority targets
+Blazing Scream should become the persistent threat around which the rest of the rotation operates.
 
-Against packs, position so the build can hit meaningful density. Against dangerous elites, identify the enemy that can disrupt the rotation or force defensive movement.
+Against trash, keep moving while the skulls do the work. Against elites and bosses, concentrate the skull generation where it can remain on the target.
 
-### 3. Commit the damage window
+### Use Dark Prison deliberately
 
-Use the build's main offensive interaction when the target is properly set up. The goal is to stack your damage into a controlled window rather than spreading cooldowns randomly across the fight.
+Dark Prison is more valuable when it supports a real damage window than when it is pressed automatically on cooldown.
 
-### 4. Reposition and reset
+Use it to help control dangerous targets and create a stable period where the rest of the build can work.
 
-If the target survives, move, refresh defensive effects, restore resources, and recreate the next window. Do not stand still trying to force damage while the build is between cycles.
+### Treat Metamorphosis as part of the engine
 
-## Boss strategy
+Metamorphosis is not simply an emergency defensive button in many Blazing Scream variants. It can be part of the build's offensive and survivability loop.
 
-Boss fights reward clean repetition. Focus on:
+Learn when your chosen variant expects you to activate it and what must already be active first.
 
-- Keeping your important debuffs/effects active
-- Preserving defensive tools for dangerous mechanics
-- Avoiding unnecessary movement during a damage window
-- Resetting rather than forcing a bad cycle
-- Learning which boss mechanics interrupt your optimal sequence
+### Reset cleanly
 
-## Farming logic
+If a damage window ends, reposition, restore resources, and rebuild the next cycle instead of forcing bad uptime while vulnerable.
 
-Farm according to the bottleneck that is actually holding the build back.
+## Packs versus bosses
 
-| Need | Farming priority |
+### General clearing
+
+Favor:
+
+- Mobility
+- Wide skull coverage
+- Minimal stopping
+- Fast target acquisition
+- Defensive effects that remain active while moving
+
+### Bosses
+
+Favor:
+
+- Reliable uptime
+- Correct positioning
+- Controlled cooldown use
+- Stable defensive timing
+- Repeating good damage windows
+
+Against bosses, the build becomes less about moving through enemies and more about maintaining the engine without losing uptime to mechanics.
+
+## Farming priorities
+
+Farm according to the bottleneck actually limiting the build.
+
+| Problem | What to prioritize |
 |---|---|
-| Missing core item | Target the activity/source that can produce it |
-| Weak glyphs | Prioritize glyph progression |
-| Poor general gear | Favor fast, high-volume loot |
-| Crafting shortage | Farm the material blocking your next upgrade |
-| Build feels fragile | Fix defenses before chasing marginal damage |
+| Missing build-defining gear | Targeted item farming |
+| Weak glyphs | Glyph progression |
+| Poor general gear | High-volume loot activities |
+| Missing crafting material | The activity that produces that material |
+| Dying too often | Defensive upgrades before marginal damage |
+| Slow boss kills | Single-target optimization |
 
 ## Gear evaluation
 
-A piece is valuable when it improves the build's actual loop. Do not overvalue a small numerical upgrade if it breaks resource flow, cooldown timing, survivability, or an important interaction.
+A replacement is good only if it improves the real build.
 
-Use this order when evaluating a replacement:
+Ask:
 
-1. Does it preserve the required build interaction?
-2. Does it improve the important affixes?
-3. Does it solve a real weakness?
-4. Is it good enough to justify additional crafting investment?
+1. Does it preserve every required interaction?
+2. Are the important affixes better?
+3. Does it fix a meaningful weakness?
+4. Is the upgrade large enough to justify crafting resources?
+
+A small item-power increase that breaks the rotation is not an upgrade.
 
 ## Masterworking
 
-Spend heavily only on pieces with a reasonable chance of staying equipped. A merely decent temporary item should remain functional, not become an expensive project.
+Do not aggressively masterwork temporary items.
 
-## When the build is ready to push
+A good sequence is:
 
-Increase difficulty when normal content has become controlled and repeatable. If moving up makes every elite slow and every mistake fatal, farming one tier lower will usually produce faster overall progression.
+1. Functional placeholder
+2. Correct base item
+3. Correct key affixes
+4. Strong rolls
+5. Masterworking
+6. Expensive rerolling/min-maxing
 
-## Related decisions
+## Difficulty progression
 
-Use the **Fresh Level 70 Warlock Roadmap** for overall endgame order and **What to Keep, Salvage, and Save** for stash and resource decisions.
+Move up when:
+
+- Packs die quickly.
+- Elites do not stall the run.
+- Bosses are controlled.
+- Defensive failures are rare.
+- Your clear speed remains efficient.
+
+If a higher tier doubles the time needed to complete routine content, drop back down and farm faster.
+
+## Variant choice
+
+Use the variant that matches the content you are actually doing.
+
+- **Speed farm:** movement and fast pack clearing
+- **Tank:** safer general play
+- **Push:** maximum performance in difficult content
+- **Starter/midgame:** easier gearing while the full setup is incomplete
+
+Do not force the push version into everyday farming if a faster setup clears your normal content better.
+
+## Related guides
+
+Use the **Fresh Level 70 Warlock Roadmap** for the overall post-70 order and **What to Keep, Salvage, and Save** for stash decisions.
