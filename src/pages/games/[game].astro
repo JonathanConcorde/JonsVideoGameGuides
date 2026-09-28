@@ -16,23 +16,31 @@ const gameMeta = {
 };
 
 const diabloChecklist = [
-  { id:'elegy', label:'Elegy', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Core Blazing Scream setup', priority:1 },
-  { id:'infernal-homunculus', label:'Infernal Homunculus', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:2 },
-  { id:'eightfold-idol', label:'Eightfold Idol', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:3 },
-  { id:'temerity', label:'Temerity', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:4 },
-  { id:'molochs-beating-flame', label:"Moloch's Beating Flame", group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:5 },
-  { id:'hand-of-apotheosis', label:'Hand of Apotheosis', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:6 },
-  { id:'leorics-crown', label:"Leoric's Crown", group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:7 },
-  { id:'stone-of-jordan', label:'Stone of Jordan', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Build equipment target', priority:8 },
-  { id:'enigma', label:'Enigma', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Runeword target', priority:9 },
-  { id:'glyph-eldritch-sight', label:'Eldritch Sight leveled', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'First glyph priority', priority:10 },
-  { id:'glyph-demonologist', label:'Demonologist leveled', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'Second glyph priority', priority:11 },
-  { id:'glyph-unbound', label:'Unbound leveled', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'Third glyph priority', priority:12 },
-  { id:'glyph-hellforge', label:'Hellforge leveled', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'Fourth glyph priority', priority:13 },
-  { id:'glyph-attrition', label:'Attrition leveled', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'Fifth glyph priority', priority:14 },
-  { id:'gems', label:'Correct gems installed', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#gems', note:'Ruby weapon/jewelry; Sapphire armor', priority:15 },
-  { id:'rotation', label:'Rotation feels reliable', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#rotation', note:'Metamorphosis → Dark Prison → Sigil → Blazing Scream', priority:16 },
-  { id:'masterwork', label:'Core permanent pieces masterworked', group:'Optimization', href:'/guides/diablo-4-blazing-scream/#masterworking', note:'Only after stable gear', priority:17 }
+  { id:'elegy', label:'Elegy', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Lord Zir · central Skull Splitter piece', priority:1 },
+  { id:'infernal-homunculus', label:'Infernal Homunculus', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Urivar · core offhand target', priority:2 },
+  { id:'eightfold-idol', label:'Eightfold Idol', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Beast in the Ice · core ring target', priority:3 },
+  { id:'temerity', label:'Temerity', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Harbinger of Hatred · pants target', priority:4 },
+  { id:'molochs-beating-flame', label:"Moloch's Beating Flame", group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Bloodied Butcher · pair with Sadistic Aspect', priority:5 },
+  { id:'hand-of-apotheosis', label:'Hand of Apotheosis', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Bartuc · Infernal Hordes / 666 Aether', priority:6 },
+  { id:'leorics-crown', label:"Leoric's Crown", group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Waking Nightmares · Baal preferred', priority:7 },
+  { id:'stone-of-jordan', label:'Stone of Jordan', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Waking Nightmares · Baal preferred', priority:8 },
+  { id:'enigma', label:'Enigma', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Jah + Ith + Ber', priority:9 },
+  { id:'undying-boots', label:'Undying Aspect boots', group:'Core Equipment', href:'/guides/diablo-4-blazing-scream/#equipment', note:'Correct boot slot setup', priority:10 },
+
+  { id:'glyph-eldritch-sight', label:'Eldritch Sight ~50/51+', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'1st glyph priority', priority:11 },
+  { id:'glyph-demonologist', label:'Demonologist ~50/51+', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'2nd glyph priority', priority:12 },
+  { id:'glyph-unbound', label:'Unbound ~50/51+', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'3rd glyph priority', priority:13 },
+  { id:'glyph-hellforge', label:'Hellforge ~50/51+', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'4th glyph priority', priority:14 },
+  { id:'glyph-attrition', label:'Attrition ~50/51+', group:'Glyphs', href:'/guides/diablo-4-blazing-scream/#glyphs', note:'5th glyph priority', priority:15 },
+
+  { id:'gems', label:'Royal gems installed', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#gems', note:'Ruby weapon/jewelry · Sapphire armor', priority:16 },
+  { id:'runes', label:'Rune pairs complete', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#runes', note:'Nagu+Tir and Cir+Mot', priority:17 },
+  { id:'talisman', label:'Talisman setup complete', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#talisman', note:"Abaddon's Flesh 4 + Nameless 2 + Diamond Mind Seal", priority:18 },
+  { id:'skill-bar', label:'Skill bar matches PERFECTED', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#skill-bar', note:'Blazing Scream · Dark Prison · Rampage · Metamorphosis · Abodian · Sigil', priority:19 },
+  { id:'rotation', label:'Rotation feels reliable', group:'Build Setup', href:'/guides/diablo-4-blazing-scream/#rotation', note:'Meta → Dark Prison → manual Sigil → Blazing Scream', priority:20 },
+
+  { id:'masterwork', label:'Permanent pieces masterworked', group:'Optimization', href:'/guides/diablo-4-blazing-scream/#masterworking', note:'Only after stable gear', priority:21 },
+  { id:'pit-efficiency', label:'Pit clears are efficient', group:'Optimization', href:'/guides/diablo-4-warlock-fresh-70/#pit', note:'Farm the highest tier that stays fast', priority:22 }
 ];
 
 export async function getStaticPaths(){
@@ -64,7 +72,7 @@ const isDiablo=game==='diablo-4';
   <div class="section-heading"><div><div class="kicker">Season 15 progress</div><h2>What should I do next?</h2><p class="section-copy">Check off what you already have. Your progress is saved on this device, and the next incomplete priority is surfaced automatically.</p></div></div>
   <div class="tracker-summary">
     <div><span class="tracker-label">NEXT PRIORITY</span><strong id="next-task">Loading your checklist…</strong><a id="next-task-link" class="text-link" href="/guides/diablo-4-blazing-scream/#equipment">Open the relevant guide section →</a></div>
-    <div class="tracker-progress"><span id="progress-count">0 / 17</span><div class="progress-bar"><span id="progress-fill"></span></div></div>
+    <div class="tracker-progress"><span id="progress-count">0 / 22</span><div class="progress-bar"><span id="progress-fill"></span></div></div>
   </div>
   <div class="checklist-grid">
     {['Core Equipment','Glyphs','Build Setup','Optimization'].map(group=><div class="checklist-card">
